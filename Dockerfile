@@ -13,7 +13,7 @@ RUN yum -y install git gcc-c++ autoconf automake libtool wget python ncurses-dev
 RUN git config --global user.email "you@example.com" && \
      git config --global user.name "Your Name"
 
-#RUN yum -y install libtool-bin libexpat1 libexpat1-dev python2.7-devel python3.4-devel xorriso
+RUN yum -y install stgit lzma
 
 RUN cd /opt/onie/build-config && \
     make -j4 MACHINE=kvm_x86_64 all recovery-iso
